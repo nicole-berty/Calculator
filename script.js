@@ -47,6 +47,18 @@ function display(value) {
     
 }
 
+function clr() {
+    document.getElementById("result").value = "0";
+}
 
+function del() {
+    let str = document.getElementById("result").value;
+    if(str.length > 1) {
+        str = str.substring(0, str.length - 1);
+        document.getElementById("result").value = str;
+    } else if(str.length == 1) {
+        document.getElementById("result").value = "0";
+    }
+}
 
 console.log(operate("/", 6, 12));
